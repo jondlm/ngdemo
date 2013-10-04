@@ -1,0 +1,27 @@
+<h1 class="page-header">Contacts</h1>
+
+<form>
+  <label for="search">Search</label>
+  <input placeholder="Type here..." type="text" id="search" ng-model="search">
+</form>
+
+<br>
+
+<div ng-repeat="item in data | filter:search" class="well" style="display:inline-block; margin: 5px; min-width:400px; float:left;">
+  <table class="table">
+    <h3>{{item.name}}</h3>
+    <tr>
+      <th>Company</th>
+      <td><input type="text" ng-model="item.company" placeholder="item.company"></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><input type="text" ng-model="item.email" placeholder="item.email"></td>
+    </tr>
+    <tr>
+      <th>Phone</th>
+      <td><input type="text" ng-model="item.phone" placeholder="item.phone"></td>
+    </tr>
+
+  </table>
+</div>
