@@ -8,3 +8,4 @@ angular.module('filters', []).
       return String(text).toUpperCase();
     };
   });
+

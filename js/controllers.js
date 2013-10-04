@@ -19,5 +19,24 @@ var data = [
 
 angular.module('myApp.controllers', []).
   controller('main', function($scope) {
-    $scope.data = data;  
+    $scope.data = data;
+    $scope.test = 'Hello';
+
+
+    $scope.addContact = function() {
+      $scope.data.push({
+        name: $scope.contactName,
+        company: $scope.contactCompany,
+        email: $scope.contactEmail,
+        phone: $scope.contactPhone,
+        netWorth: $scope.contactNetWorth
+      });
+      
+      $scope.contactName = '';
+      $scope.contactCompany = '';
+      $scope.contactEmail = '';
+      $scope.contactPhone = '';
+      $scope.contactNetWorth = '';
+    };
+
   });
