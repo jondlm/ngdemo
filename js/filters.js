@@ -2,9 +2,9 @@
 
 /* Filters */
 
-angular.module('myApp.filters', []).
-  filter('interpolate', ['version', function(version) {
+angular.module('filters', []).
+  filter('upper', function(version) {
     return function(text) {
-      return String(text).replace(/\%VERSION\%/mg, version);
-    }
-  }]);
+      return String(text).toUpperCase();
+    };
+  });
