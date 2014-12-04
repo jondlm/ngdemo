@@ -1,6 +1,5 @@
 'use strict';
 
-/* Services */
 
 
 // Demonstrate how to register services
